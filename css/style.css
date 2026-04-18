@@ -16,13 +16,13 @@ header {
   
   display: flex;
   justify-content: space-between;  
-  align-items: center;
+  
   background-color: rgb(247, 244, 244);
   padding: 20px;
   text-align: right;
   box-sizing: border-box;
-  flex-direction: row;
-  gap: 10px;
+  flex-flow: row nowrap;
+  gap: 8px;
   
     
 }
@@ -51,7 +51,7 @@ nav li {
 
 .textonormal a{
   text-decoration: none;
-  color: black;
+  color: rgb(163, 68, 68);
 }
 
 .cadastro a{
@@ -74,16 +74,53 @@ nav li {
   color: none; 
   background-color: #ff3131; 
   font-weight: 600;
-  color: white;   
+  color: white; 
+    
 }
 
-img{
-  margin-right: 0%;
+
+section.flex-content{
+  padding: 20px;
+
+  display: flex;
+  flex-flow: column nowrap;
 }
-.texto1{
-  margin-left: 50px;
-  margin-top: 50px;
-  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+
+
+article.text-missao{
+  display: flex;
+  flex-flow: row wrap;
+
+}
+
+article.text-hf{
+  display: flex;
+  flex-flow: row wrap;
+}
+
+article div.texto1 h1{
+  color: #790404;
+  background-image: linear-gradient(to right,#ff3131, transparent );
+}
+ article.text-missao p{
+      line-height: 1.5;
+      margin-top: 10px;
+      margin-bottom: 10px;
+}
+
+ article.text-hf p{
+      line-height: 1.5;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+article.text-missao img{
+  width: 500px;
+  margin-right: 60%;
+  
+}
+article.text-hf img{
+  width: 500px;
+  margin-left: 60%;
 }
 
 
@@ -95,8 +132,8 @@ h2{
   font-size: 24px;
 }
 
-p1{
-  font-size: 18px;
+p{
+  font-size: 1.1em;
 }
 
 .imghero{
@@ -119,101 +156,8 @@ p1{
   
 }
 
-.texto1{
-  text-align: left;
-  top: 100%;
-  margin-left: 300px;
-}
-
-.missao{
-  margin: 100px;
-  display: flex;
-  gap: 100px;
-  align-items: center;
-  justify-content: center;
-}
-
-.titulo{
-  font-weight: 700;
-  color: #ff3131;
-  margin-bottom: 15px;
-}
-
-.paragrafo{
-  text-align: left;
-  max-width: 500px;
-  font-weight: 400;
-}
-
-.botaocadastro{
-  border-radius: 10px;
-  border:none;
-  color: white;
-  background-color: #ff3131;
-  font-weight: 600;
-  padding: 10px;
-  text-decoration: none;
-}
-
-.botaohpc{
-  margin: 20px 0 0 0;
-}
 
 
-
-
-
-
-
-
-
-.homeoffice{
-  margin: 80px auto;
-  display: flex;
-  gap: 0px;
-  align-items: center;
-  justify-content: center;
-}
-
-.texto2{
-  text-align: right;
-  top: 100%;
-  margin-left: 300px;
-}
-
-.titulo2{
-  text-align: right;
-  font-weight: 700;
-  color: #ff3131;
-  margin-bottom: 15px;
-}
-
-.paragrafo2{
-  text-align: right;
-  max-width: 500px;
-  font-weight: 400;
-}
-
-.botaocadastro2{
-  border-radius: 10px;
-  border:none;
-  color: white;
-  background-color: #ff3131;
-  font-weight: 600;
-  padding: 10px;
-  text-decoration: none;
-  margin-left: 35%;
-}
-
-.botaohpc2{
-  margin: 20px 0 0 0;
-}
-
-.futuro{
-  height: auto;
-  margin: 0;
-  margin-right: -150px;
-}
 
 
 .servicos{
@@ -260,11 +204,12 @@ p1{
 
 footer{
   background-color: rgb(75, 2, 2);
-  padding: 40px 20px 20px 20px;
+  padding: 20px;
 }
 
 footer p{
   color: white;
+  padding: 5px;
 }
 
 
@@ -334,16 +279,68 @@ footer p{
     background-color: #d00000;
 }
 
-/* Responsivo */
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
     .contato-section {
         flex-direction: column;
         text-align: center;
         align-items: center;
-    }
+  }
 
     .contato-form {
         width: 100%;
         max-width: 350px;
-    }
+  }
+
+    body{
+  }
+    article.text-missao img{
+        width: 350px;
+        display: block;
+        margin: auto;
+}
+
+   
+    article.text-hf img{
+        width: 350px;
+        display: block;
+        margin: auto;
+}
+  }
+
+
+@media (max-width: 889px) {
+
+  header{
+    flex-flow: row wrap;
+  }
+
+  nav ul{
+    align-items: flex-end;
+  }
+
+  .cadastro{
+    padding: 5px;
+    border-radius: 5px;
+    margin: -5px;
+  }
+
+  .botaohpc2{
+    padding: 0px;
+    height: 60px;
+    
+  }
+  .botaohpc2 a{
+    font-size: 15px;
+  }
+
+  footer{
+    padding: 10px;
+  }
+
+  footer p{
+    font-size: 0.9em;
+  }
+
+
+
 }

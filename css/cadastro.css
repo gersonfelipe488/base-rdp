@@ -144,3 +144,12 @@ p1{
     border-radius: 5px;
     font-size: 14px;
 }
+
+@media (max-width: 796px) {
+
+.btn-voltar{
+  
+  left: 7px;
+}
+  
+}
