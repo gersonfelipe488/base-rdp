@@ -317,7 +317,7 @@ footer p{
   header img{
     position: relative;
     left: -30px;
-    max-width: 400px;
+    max-width: 350px;
   }
   nav ul{
     align-items: flex-end;
