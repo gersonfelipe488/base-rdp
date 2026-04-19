@@ -182,7 +182,7 @@ p{
 
 
 .card img{
-    width: 400px;  
+  width: 400px;  
   height: 300px;    
   object-fit: cover; 
   
@@ -308,12 +308,16 @@ footer p{
   }
 
 
-@media (max-width: 889px) {
+@media (max-width: 768px) {
 
   header{
     flex-flow: row wrap;
   }
 
+  header img{
+    position: relative;
+    left: -30px;
+  }
   nav ul{
     align-items: flex-end;
   }
@@ -333,6 +337,14 @@ footer p{
     font-size: 15px;
   }
 
+  .card{
+    max-width: 400px;
+  }
+
+  .card img{
+    width: 300px;
+    border-radius: 5px;
+  }
   footer{
     padding: 10px;
   }
